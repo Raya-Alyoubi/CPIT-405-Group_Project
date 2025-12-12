@@ -1,12 +1,13 @@
 import axios from "axios";
 
-// Use Vite proxy to avoid CORS:
-// /met -> https://collectionapi.metmuseum.org
-const BASE_URL = "/met/public/collection/v1";
+
+const BASE_URL = "https://collectionapi.metmuseum.org/public/collection/v1";
 
 // Involvement API (likes & comments)
 const INVOLVEMENT_BASE =
   "https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/pKSoTbGzFhj5RtoeFQif";
+
+/* ------------------------ Met API ------------------------ */
 
 // Get list of object IDs for paintings (used on Home)
 export async function getPaintingIds() {
