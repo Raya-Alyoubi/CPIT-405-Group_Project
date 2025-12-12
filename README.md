@@ -1,16 +1,189 @@
-# React + Vite
+TheMet – Metropolitan Museum Explorer 🎨
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+TheMet is a React-based web application inspired by the Metropolitan Museum of Art.
+The project allows users to explore artworks, search collections, like artworks, and interact through comments, while implementing authentication, protected routes, and external API integration.
 
-Currently, two official plugins are available:
+📌 Project Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This application was developed as part of a course requirement to demonstrate:
 
-## React Compiler
+User authentication and session management
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Protected routes
 
-## Expanding the ESLint configuration
+External API integration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Clean React architecture
+
+Proper state management and UI handling
+
+The project is inspired by an earlier Angular version and rebuilt using React.js.
+
+🛠️ Technology Stack
+
+Frontend: React.js (Vite)
+
+Routing: React Router
+
+Styling: CSS3 (index.css)
+
+State Management: React Context API + Hooks
+
+HTTP Requests: Fetch API
+
+Backend (PHP):
+
+API proxy for Met Museum API
+
+Profile page integration
+
+Comments handling
+
+🔐 Authentication Features
+
+User registration and login
+
+Secure password hashing using SHA-256
+
+Session persistence using localStorage
+
+User profile page
+
+Logout functionality
+
+🛡️ Protected Routes
+
+Private routes are protected using a ProtectedRoute component
+
+Unauthenticated users are redirected to the login page
+
+Navigation guards ensure secure access
+
+User roles are stored (default: user)
+
+🌐 External API Integration
+
+Metropolitan Museum of Art API
+
+Artwork search
+
+Departments
+
+Artwork details
+
+PHP proxy is used to avoid CORS issues
+
+Error handling and loading states are implemented
+
+⭐ Main Features
+
+Home Page
+
+Displays artworks with caching and prefetching
+
+Load more functionality
+
+Search Page
+
+Dedicated full-width search bar
+
+Search results with pagination
+
+Departments
+
+Browse artworks by department
+
+Likes Page
+
+Save favorite artworks
+
+Persistent across sessions
+
+Artwork Modal
+
+Detailed artwork view
+
+Comments section
+
+Profile Page
+
+Displays user information
+
+PHP integration for backend requirement
+
+📁 Project Structure
+TheMet/
+│
+├── src/
+│   ├── components/
+│   ├── pages/
+│   ├── context/
+│   ├── services/
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── index.css
+│
+├── php/
+│   ├── met_proxy.php
+│   ├── profile.php
+│   ├── comments.php
+│   └── comments_get.php
+│
+├── public/
+├── package.json
+└── README.md
+
+⚙️ Installation & Run Instructions
+1️⃣ Install dependencies
+npm install
+
+2️⃣ Run the React application
+npm run dev
+
+
+The app will run on:
+
+http://localhost:5173
+
+3️⃣ PHP Setup
+
+Place the project inside xampp/htdocs/TheMet
+
+Start Apache from XAMPP
+
+PHP files are accessed via:
+
+http://localhost/TheMet/php/
+
+📱 Responsiveness
+
+Responsive layout for desktop and tablets
+
+Grid-based layout adapts to screen size
+
+Sticky navigation bar
+
+⚠️ Notes & Limitations
+
+Role-based access control is partially implemented (role exists but no admin-only pages).
+
+Comments persistence depends on PHP backend storage.
+
+Accessibility can be further improved with ARIA attributes.
+
+✅ Course Requirements Checklist
+
+✔ User Authentication
+✔ Secure Password Handling
+✔ Session Management
+✔ Protected Routes
+✔ External API Integration
+✔ Organized Project Structure
+✔ Clean & Modular Code
+✔ PHP Integration
+
+👤 Author
+
+Developed by: Aseel Alnefaie, Layan Baasoor, Raya Alyoubi
+Course: CPIT / Web Development
+Year: 2025
