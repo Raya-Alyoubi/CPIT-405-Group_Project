@@ -1,0 +1,506 @@
+
+:root {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #111;
+  color: #f5f5f5;
+}
+
+body {
+  margin: 0;
+}
+
+.app-root {
+  min-height: 100vh;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  padding: 1.5rem 2rem 2rem;
+}
+
+/* Top navbar */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #202020;
+  border-radius: 999px;
+  padding: 0.6rem 1.5rem;
+  margin: 1rem 1.5rem 0;
+  position: sticky;
+  top: 0.5rem;
+  z-index: 20;
+}
+
+/* Museum title box like a rounded rectangle */
+
+.museum-title-box {
+  display: flex;
+  flex-direction: column;
+  padding: 0.4rem 0.9rem;
+  border-radius: 999px;
+  background-color: #333;
+  border: 1px solid #555;
+  font-size: 0.8rem;
+}
+
+.museum-title-top {
+  font-weight: 600;
+}
+
+.museum-title-bottom {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* Nav links */
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #ddd;
+  padding: 0.3rem 0.9rem;
+  border-radius: 999px;
+  font-size: 0.85rem;
+}
+
+.nav-link.active {
+  background-color: #f3d5b5;
+  color: #222;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.nav-username {
+  font-size: 0.8rem;
+  opacity: 0.9;
+}
+
+.nav-button {
+  border-radius: 999px;
+  border: none;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+  font-size: 0.8rem;
+  background-color: #f5c16c;
+  color: #221;
+}
+
+.nav-button.secondary {
+  background-color: transparent;
+  border: 1px solid #666;
+  color: #eee;
+}
+
+/* Pages */
+
+.page {
+  margin-top: 1rem;
+}
+
+.section-title {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+}
+
+/* Home header + search */
+
+.home-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.home-title-group {
+  color: #fefae0;
+}
+
+.home-title-top {
+  font-size: 1.6rem;
+  margin: 0;
+}
+
+.home-title-bottom {
+  font-size: 1rem;
+  margin: 0;
+  opacity: 0.8;
+}
+
+.home-search {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.home-search input {
+  padding: 0.4rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid #666;
+  background-color: #111;
+  color: #fff;
+}
+
+.home-search button {
+  border-radius: 999px;
+  border: none;
+  padding: 0.4rem 0.9rem;
+  cursor: pointer;
+}
+
+/* Cards grid */
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+/* Artwork cards */
+
+.art-card {
+  border-radius: 1.5rem;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 260px;
+  cursor: pointer;
+}
+
+.art-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.art-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.art-title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.art-artist {
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+.art-card-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+}
+
+.like-button,
+.readmore-button {
+  border-radius: 999px;
+  border: 1px solid #00000033;
+  padding: 0.25rem 0.8rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+/* Load more */
+
+.load-more-button {
+  margin: 1.5rem auto 0;
+  display: block;
+  border-radius: 999px;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  cursor: pointer;
+}
+
+/* Modal styles */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: #000000aa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 40;
+}
+
+.modal-content {
+  background-color: #1f1f1f;
+  max-width: 720px;
+  width: 90%;
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 1.5rem;
+  padding: 1.2rem;
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  border: none;
+  background: transparent;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.modal-image {
+  width: 100%;
+  border-radius: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.modal-title {
+  margin: 0 0 0.2rem;
+}
+
+.modal-artist {
+  margin: 0 0 0.6rem;
+  opacity: 0.8;
+  font-size: 0.9rem;
+}
+
+.modal-detail {
+  font-size: 0.85rem;
+  margin: 0.1rem 0;
+}
+
+.modal-section-title {
+  margin-top: 0.8rem;
+}
+
+/* Comments */
+
+.comments-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  font-size: 0.85rem;
+}
+
+.comment-date {
+  opacity: 0.7;
+  margin-right: 0.4rem;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+}
+
+.comment-form input,
+.comment-form textarea {
+  background-color: #111;
+  border-radius: 0.6rem;
+  border: 1px solid #444;
+  color: #fff;
+  padding: 0.4rem 0.6rem;
+}
+
+.comment-form button {
+  align-self: flex-end;
+  border-radius: 999px;
+  border: none;
+  padding: 0.35rem 0.9rem;
+  cursor: pointer;
+}
+
+/* Departments list */
+
+.department-list {
+  list-style: none;
+  padding: 0;
+}
+
+.department-item {
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.8rem;
+  background-color: #222;
+  margin-bottom: 0.4rem;
+  cursor: pointer;
+}
+
+/* Auth forms */
+
+.auth-form {
+  max-width: 360px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.85rem;
+}
+
+.auth-form input {
+  padding: 0.4rem 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #555;
+  background-color: #111;
+  color: #fff;
+}
+
+.auth-form button {
+  margin-top: 0.4rem;
+  border-radius: 999px;
+  border: none;
+  padding: 0.45rem 1rem;
+  cursor: pointer;
+}
+
+.auth-switch {
+  font-size: 0.8rem;
+}
+
+/* Basic responsiveness */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+  }
+
+  .home-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+/* -----------------------------
+   SEARCH PAGE (full-width bar + spacing)
+------------------------------ */
+
+/* Header row: title on top, search bar full width under it */
+.search-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+/* Full width search bar */
+.search-bar {
+  width: 100%;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* Make input take all available space */
+.search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 0.55rem 0.9rem;
+  border-radius: 999px;
+  border: 1px solid #666;
+  background-color: #111;
+  color: #fff;
+}
+
+/* Keep button visible and not squeezed */
+.search-button {
+  flex: 0 0 auto;
+  border-radius: 999px;
+  border: none;
+  padding: 0.55rem 1.2rem;
+  cursor: pointer;
+}
+
+/* Give cards space from the search bar so they never overlap */
+.search-results {
+  margin-top: 0.5rem;
+}
+
+/* -----------------------------
+   UNIFIED CARD SIZE (Home/Search/Likes/Departments)
+------------------------------ */
+
+/* Force a consistent grid density everywhere */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1rem;
+  align-items: start;
+}
+
+/* Force consistent card height and internal layout */
+.art-card {
+  min-height: 320px;        /* makes all cards equal height */
+  height: 320px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image area consistent */
+.art-image {
+  height: 170px;
+  flex: 0 0 auto;
+}
+
+/* Keep footer always at bottom */
+.art-card-content {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.art-card-footer {
+  margin-top: auto;
+}
+
+/* Titles don't push the card bigger */
+.art-title {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* -----------------------------
+   LIKES PAGE (make it use the SAME grid/cards)
+   (Works if Likes page renders ArtworkCard inside .cards-grid)
+------------------------------ */
+
+/* If you still have an old "big image" likes container, force it to behave like grid */
+.likes-page .cards-grid {
+  margin-top: 0.75rem;
+}
+
+/* -----------------------------
+   Small helpers
+------------------------------ */
+
+.muted-text {
+  opacity: 0.75;
+}
+
+/* Optional: better spacing under page title */
+.section-title {
+  margin-bottom: 0.75rem;
+}
