@@ -155,6 +155,19 @@ PHP files are accessed via:
 
 http://localhost/TheMet/php/
 
+4 Live Demo (Recommended)
+The application is deployed and available online via GitHub:
+
+🔗 **Live Demo:** https://raya-alyoubi.github.io/CPIT-405-Group_Project/#/
+
+No local setup is required to use the application.
+
+also The application is deployed and available online via Netlify:
+
+🔗 **Live Demo:** https://joyful-begonia-409079.netlify.app
+
+No local setup is required to use the application.
+
 📱 Responsiveness
 
 Responsive layout for desktop and tablets
