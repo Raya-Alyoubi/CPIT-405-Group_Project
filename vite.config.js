@@ -4,6 +4,10 @@ import react from "@vitejs/plugin-react";
 export default defineConfig({
   plugins: [react()],
   base: "/CPIT-405-Group_Project/",
+  build: {
+    outDir: "docs",
+    emptyOutDir: true,
+  },
  /* server: {
     // IMPORTANT: avoids CORS by proxying Met API through Vite dev server
     proxy: {
