@@ -8,7 +8,7 @@ import { LikesProvider } from "./context/LikesContext";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename="/CPIT-405-Group_Project/">
       <AuthProvider>
         <LikesProvider>
           <App />
