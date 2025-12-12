@@ -3,7 +3,8 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  server: {
+  base: "/CPIT-405-Group_Project/",
+ /* server: {
     // IMPORTANT: avoids CORS by proxying Met API through Vite dev server
     proxy: {
       "/met": {
@@ -13,5 +14,5 @@ export default defineConfig({
         rewrite: (path) => path.replace(/^\/met/, ""),
       },
     },
-  },
+  },*/
 });
