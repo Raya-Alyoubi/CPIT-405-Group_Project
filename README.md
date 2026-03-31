@@ -158,7 +158,7 @@ http://localhost/TheMet/php/
 4 Live Demo (Recommended)
 The application is deployed and available online via GitHub:
 
-🔗 **Live Demo:** https://raya-alyoubi.github.io/CPIT-405-Group_Project/#/
+🔗 **Live Demo:** https://raya-alyoubi.github.io/TheMet-Metropolitan_Museum_Explorer/#/
 
 No local setup is required to use the application.
 
