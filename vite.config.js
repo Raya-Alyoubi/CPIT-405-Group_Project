@@ -3,5 +3,5 @@ import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-  base: "/TheMet-Metropolitan_Museum_Explorer/",
+  base: "/CPIT-405-Group_Project/",
 });
